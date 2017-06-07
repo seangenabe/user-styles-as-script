@@ -1,0 +1,31 @@
+{
+  "name": "user-styles-as-script",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=7"
+  },
+  "scripts": {
+    "gen": "node scripts/generate-styles-js",
+    "prebrowserify": "mkdirp dist",
+    "browserify": "node scripts/browserify.js",
+    "build": "npm run gen && npm run browserify"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "Sean Genabe <seangenabe@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "css": "^2.2.1",
+    "insert-css": "^2.0.0",
+    "loud-rejection": "^1.6.0",
+    "mkdirp": "^0.5.1",
+    "mz": "^2.6.0",
+    "stylify": "^1.3.1",
+    "stylus": "^0.53.0"
+  }
+}
